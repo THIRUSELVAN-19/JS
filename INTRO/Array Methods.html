@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+
+    <script>
+        
+        let arr = ['youwerbmk',12,45,[90,78,56],67,'world']
+        console.log(arr);
+        // document.write(arr);
+        console.log(arr.length);
+        console.log(arr.concat([20]));
+        console.log(arr.join('/'));
+        // console.log(arr.reverse());
+        arr.pop(); //last remove
+        console.log(arr);
+        arr.push('hello'); // last add 
+        console.log(arr);
+        arr.shift(); // starting remove
+        console.log(arr);
+        arr.unshift('program');  //staring add
+        console.log(arr); 
+        console.log(arr[0]); 
+        console.log(arr[3]); 
+        console.log(arr[3][1]); 
+        console.log(arr.flat()); 
+        console.log(arr.sort()); 
+        arr.splice(0,0,'one','two')
+        console.log(arr); 
+        console.log(arr.slice(5)); 
+
+    </script>
+    
+</body>
+</html>

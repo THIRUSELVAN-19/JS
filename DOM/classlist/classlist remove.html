@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yellow {
+            background: yellow;
+            padding: 25px;
+        }
+        .green {
+            background: rgb(213, 227, 14);
+            padding: 25px;
+        }
+        .olive {
+            background: olivedrab;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="yellow">THIRUSELVAN B</h1>
+    <button >change</button>
+
+    <script>
+
+                const btn = document.querySelector('button');
+        btn.onclick=()=>{
+            const h1 = document.querySelector('h1');
+            const h1class = h1.getAttribute('class');
+
+            if(h1class =='yellow'){
+                h1.classList.remove('yellow')
+                h1.classList.add('green')
+                    h1.classList.remove('green')
+                    h1.classList.add('olive')
+                
+            }else{
+                h1.classList.remove('olive')
+                h1.classList.add('green')
+                    h1.classList.remove('green')
+                    h1.classList.add('yellow')
+
+
+            }
+            }
+            
+      
+    </script>
+    
+</body>
+</html>

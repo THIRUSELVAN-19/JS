@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      // if
+      //  if (condition) {
+
+      //  }
+
+      // if-else
+      //   if (condition) {
+      //     //   state
+      //   } else {
+      //     //  state
+      //   }
+
+      let age = 90;
+
+      //   if (age >= 18 && age <= 100) {
+      //     document.getElementById("demo").innerHTML = "valid";
+      //   } else {
+      //     document.getElementById("demo").innerHTML = "inalid";
+      //   }
+
+      //   if else-if
+
+      //   if (age >= 18 && age <= 50) {
+      //     document.getElementById("demo").innerHTML = "new valid";
+      //   }
+      //   else if (age > 50 && age <= 100) {
+      //     document.getElementById("demo").innerHTML = "old valid";
+
+      //   } else {
+      //     document.getElementById("demo").innerHTML = "inalid";
+      //   }
+
+      // nested
+
+      if (age >= 18 && age <= 100) {
+        document.getElementById("demo").innerHTML = "valid" + "<br>";
+
+        if (age >= 18 && age <= 50) {
+          document.getElementById("demo").innerHTML += "new valid";
+        } else if (age > 50 && age <= 75) {
+          document.getElementById("demo").innerHTML += "old valid";
+        } else {
+          document.getElementById("demo").innerHTML += "passed";
+        }
+      } else {
+        document.getElementById("demo").innerHTML = "inalid";
+      }
+    </script>
+  </body>
+</html>

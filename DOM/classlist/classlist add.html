@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+          background-color: greenyellow;
+          padding: 16px;
+        }
+        .blue{
+            background-color: skyblue;
+            padding: 16px;
+        }
+        </style>
+</head>
+<body>
+    <h1 class="red">THIRUSELVAN B</h1>
+
+    <button >change</button>
+
+    <!-- <div class="thiru"> -->
+    <!-- </div> -->
+    
+    <script>
+        const btn = document.querySelector('button');
+        btn.onclick=()=>{
+            const h1 = document.querySelector('h1');
+            const h1class = h1.getAttribute('class');
+
+            if(h1class =='red'){
+                h1.classList.remove('red')
+                h1.classList.add('blue')
+            }else{
+                h1.classList.remove('blue');
+                h1.classList.add('red')
+            }
+        }
+    
+        </script>
+</body>
+</html>

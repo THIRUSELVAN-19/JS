@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            background-color: rgb( a , b , c);
+        }
+    </style>
+</head>
+<body>
+    <button type="button" onclick="myFunction()">Set background color</button>
+    <script>
+        
+        // console.log(  );
+        
+        // Math.floor(Math.random() * 255)
+        // console.log(Math.floor(Math.random() * 255));
+        // a = Math.floor(Math.random() * 255);
+        // b = Math.floor(Math.random() * 255);
+        // c = Math.floor(Math.random() * 255);
+
+        // document.body.style.backgroundColor = rgb( "a" , "b" , "c");
+        // document.body.style.backgroundColor = "red";
+
+        // function myFunction() {
+        //     document.body.style.backgroundColor = Math.floor(Math.random() * 255) , Math.floor(Math.random() * 255) , Math.floor(Math.random() * 255);
+        // }  
+
+        let r = Math.floor(Math.random() * 255);
+        let g = Math.floor(Math.random() * 255);
+        let b = Math.floor(Math.random() * 255);
+
+        const rgb = `rgb( ${r} , ${g} , ${b})`;
+        console.log(rgb);
+        document.body.style.backgroundColor = rgb;
+
+        
+
+        
+    </script>
+</body>
+</html>

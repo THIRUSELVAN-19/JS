@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let number1 = Number(prompt("enter the value:"));
+      // console.log("first gratest number is" + number1 );
+      let number2 = Number(prompt("enter the value:"));
+      // console.log("first gratest number is" + number2 );
+      let number3 = Number(prompt("enter the value:"));
+      // console.log("first gratest number is" + number3 );
+      let number4 = Number(prompt("enter the value:"));
+      // console.log("first gratest number is" + number4 );
+
+      // var gratest = number1;
+
+      // if (number2 > gratest) {
+      //   gratest = number2
+      // }
+
+      // if (number3 > gratest) {
+      //   gratest = number3
+      // }
+
+      // if (number4 > gratest) {
+      //   gratest = number4
+      // }
+
+      // // console.log();
+      
+      
+      if (number1 > number2 && number1 > number3 && number1 > number4) {  //1
+        console.log("number one is greater :", number1);
+        if (number2 > number3 && number2 > number4) {                  //2
+          console.log("number 2 is  second greater :", number2);
+          if (number3 > number4) {
+            console.log("number 3 is  third  greater :", number3);
+            console.log("last one", number4);
+          } else {
+            console.log("number 4 is  third greater :", number4);
+            console.log("last one", number3);
+          }
+        } else if (number3 > number4 && number3 > number2) {       //3
+          console.log("number 3 is  second greater :", number3);
+          if (number4 > number2) {
+            console.log("number 4 is  third  greater :", number4);
+            console.log("last one", number2);
+          } else {
+            console.log("number 2 is  third greater :", number2);
+            console.log("last one", number4);
+          }
+        } else {
+          console.log("number 4 is  second greater :", number4);     //4
+          if (number2 > number3) { 
+            console.log("number 2 is  third  greater :", number2);
+            console.log("last one", number3);
+          } else {
+            console.log("number 3 is  third greater :", number3);
+            console.log("last one", number2);
+          }
+        }
+      } else if (number2 > number3 && number2 > number4 && number2 < number1) {    //2
+        console.log("number 2 is second greater :", number2);
+        if ( number3 > number4 && number3 > number1 ) {                            //3
+          console.log("number 2 is  third greater :", number3);
+          if (number4 > number1) {
+          console.log("number 4 is  fourth greater :", number4);
+          console.log("last one", number1);
+
+          } else {
+          console.log("number 1 is  fourth greater :", number1);
+          console.log("last one", number4);
+          }
+          
+        }
+        else if (number4 > number1 && number4 > number3) {                       //4
+          console.log("number 4 is  third greater :", number4);
+          if (number1 > number3) {
+          console.log("number 1 is  fourth greater :", number1);
+          console.log("last one", number3);
+          } else {
+            console.log("number 3 is  fourth greater :", number3);
+            console.log("last one", number1);
+          }
+
+        }
+        else {
+          if (number3 > number4) {                                                //1
+            console.log("number 1 is  fourth greater :", number3);
+            console.log("last one", number4);
+          } else {
+            console.log("number 4 is  fourth greater :", number4);
+            console.log("last one", number3);
+          }
+
+        }
+      } else if (number3 > number4 && number3 > number1 && number3 > number2) {      //3
+        console.log("number three is greater :", number3);
+        if ( number4 > number1 && number4 > number2 ) {                              //4
+          console.log("number 4 is  fourth greater :", number4);
+          if (number1 > number2) {
+          console.log("number 1 is  first greater :", number1);
+          console.log("last one", number2);
+          } else {
+            console.log("number 2 is  first greater :", number2);
+            console.log("last one", number1);
+          }
+        }
+        else if (number1 > number2 && number1 > number4) {                            //1
+          console.log("number 1 is  fourth greater :", number1);
+          if (number2 > number4) {
+            console.log("number 2 is  first greater :", number2);
+            console.log("last one", number4);
+          } else {
+            console.log("number 4 is  first greater :", number4);
+            console.log("last one", number2);
+          }
+        }
+        else {
+          if (number4 > number1 ) {                                               //2
+            console.log("number 2 is  first greater :", number2);
+            console.log("last one", number4);
+          } else {
+            console.log("number 4 is  first greater :", number4);
+            console.log("last one", number2);
+          }
+        }
+        
+
+      } else {                                         
+        console.log("number four is greater", number4);                          //4
+        if ( number1 > number2 && number1 > number3 ) {                          //1
+          console.log("number 1 is  fourth greater :", number1);
+          if (number2 > number3) {
+          console.log("number 2 is  first greater :", number2);
+          console.log("last one", number3);
+          } else {
+            console.log("number 3 is  first greater :", number3);
+            console.log("last one", number2);
+          }
+        }
+        else if (number2 > number3 && number2 > number1) {                      //2
+          console.log("number 2 is  fourth greater :", number2);
+          if (number3 > number1) {
+            console.log("number 3 is  first greater :", number3);
+            console.log("last one", number1);
+          } else {
+            console.log("number 1 is  first greater :", number1);
+            console.log("last one", number3);
+          }
+        }
+        else {
+          if (number1 > number2) {                                           //3
+            console.log("number 2 is  first greater :", number1);
+            console.log("last one", number2);
+          } else {
+            console.log("number 4 is  first greater :", number2);
+            console.log("last one", number1);
+          }
+        }
+      }
+
+
+      
+    </script>
+  </body>
+</html>

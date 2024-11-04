@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.choices button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.score {
+    margin-bottom: 20px;
+}
+
+#result {
+    background-color: greenyellow;
+    color: black;
+font-family: monospace;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <div class="score">
+        <div>Player: <span id="player-score">0</span></div>
+        <div>Computer: <span id="computer-score">0</span></div>
+    </div>
+    <div class="choices">
+        <button class="btn btn-secondary" id="rock">Rock</button>
+        <button class="btn btn-light" id="paper">Paper</button>
+        <button class="btn btn-danger" id="scissors">Scissors</button>
+    </div>
+    <div id="result"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const choices = ['rock', 'paper', 'scissors'];
+    const buttons = document.querySelectorAll('button');
+    const resultDiv = document.getElementById('result');
+    const playerScoreSpan = document.getElementById('player-score');
+    const computerScoreSpan = document.getElementById('computer-score');
+    let playerScore = 0;
+    let computerScore = 0;
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const playerChoice = button.id;
+            const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+            const winner = getWinner(playerChoice, computerChoice);
+            displayResult(playerChoice, computerChoice, winner);
+            updateScore(winner);
+        });
+    });
+
+    function getWinner(player, computer) {
+        if (player === computer) {
+            return 'draw';
+        } else if (
+            (player === 'rock' && computer === 'scissors') ||
+            (player === 'paper' && computer === 'rock') ||
+            (player === 'scissors' && computer === 'paper')
+        ) {
+            return 'player';
+        } else {
+            return 'computer';
+        }
+    }
+
+    function displayResult(player, computer, winner) {
+        if (winner === 'draw') {
+            resultDiv.textContent = `It's a draw! You both chose ${player}.`;
+        } else if (winner === 'player') {
+            resultDiv.textContent = `You win! ${player} beats ${computer}.`;
+        } else {
+            resultDiv.textContent = `You lose! ${computer} beats ${player}.`;
+        }
+    }
+
+    function updateScore(winner) {
+        if (winner === 'player') {
+            playerScore++;
+            playerScoreSpan.textContent = playerScore;
+        } else if (winner === 'computer') {
+            computerScore++;
+            computerScoreSpan.textContent = computerScore;
+        }
+    }
+});
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+    <script>
+
+        const text = '23 Hello world';
+        document.write(text +"<br>")
+        document.write('length:' , text.length  +"<br>")
+        document.write('lowercse:' , text.toLowerCase()  +"<br>")
+        document.write('uppercse:' , text.toUpperCase()  +"<br>")
+        document.write('endwidth:' , text.endsWith('e')+"<br>")
+        document.write('startwidth:' , text.startsWith(2)+"<br>")
+        document.write('Includes:' , text.includes('2')+"<br>")
+        document.write('concat:' , text.concat(' Hello IDM Techpark')+"<br>")
+        document.write('Alternate concat:' , text+"Hello World..!"+"<br>")
+        document.write('CharAt:' , text.charAt(3)+"<br>")
+        document.write('CharCodeAt:' , text.charCodeAt(3)+"<br>")
+        document.write('Alternate CharAt:' , text[5]+"<br>")
+        document.write('Slice:' , text.slice(3,11)+"<br>")
+        // document.write('Slice:' , text.slice(-12,-4)+"<br>")
+        document.write('SubString:' , text.substring(4,10)+"<br>")
+        document.write('SubStr:' , text.substr(2,7)+"<br>")
+        document.write('Repeat:' , text.repeat(3)+"<br>")
+        
+        const text1 = "     "+text+"         "
+        console.log('Text1:' , text1)
+        console.log('Trim:' , text1.trim())
+        console.log('TrimStart:' , text1.trimStart())
+        console.log('TrimEnd:' , text1.trimEnd())
+        
+        document.write('PadStart:' , text.padStart(20,"#%^&u") +"<br>")
+        document.write('PadEnd:' , text.padEnd(20,"#%^&u") +"<br>")
+        document.write('indexOf:' , text.indexOf("z") +"<br>")
+        
+        const text2 = text+" Hello IDM Techpark"
+        document.write('Text 2:' , text2 +"<br>")
+        document.write('Replace:' , text2.replace("Hello","Hi..!") +"<br>")
+        document.write('ReplaceAll:' , text2.replaceAll("Hello","Hi..!") +"<br>")
+
+
+
+
+
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cards js</title>
+  </head>
+  <body>
+    <div id="thiru">
+      <div>
+        <img src="#" alt="" height="200px" />
+        <h1 id="heading"></h1>
+        <h1 id="Age"></h1>
+        <h1 id="Style"></h1>
+      </div>
+    </div>
+    <button onclick="next()">next</button>
+    <button onclick="previos()">previos</button>
+    <script>
+      const data = [
+      {
+          Name: "Virat",
+          Age: "35",
+          Style: "RHB",
+          Image:
+            "https://documents.bcci.tv/resizedimageskirti/164_compress.png",
+        },
+        {
+          Name: "Hitman",
+          Age: "37",
+          Style: "RHB",
+          Image:
+            "https://documents.bcci.tv/resizedimageskirti/107_compress.png",
+        },
+        {
+          Name: "KL Rahul",
+          Age: "32",
+          Style: "RHB",
+          Image:
+            "https://documents.bcci.tv/resizedimageskirti/1125_compress.png",
+        },
+      ];
+
+      const imgtag = document.querySelector("img");
+      const h1 = document.querySelector("#heading");
+      const age = document.querySelector("#Age");
+      const style = document.querySelector("#Style");
+
+      let currentindex = 0;
+      const d = [];
+
+      document.getElementById("thiru").innerHTML = maps;
+
+      function next() {
+        if (currentindex >= data.length) {
+          return false;
+        }
+        d.push(data[currentindex]);
+        d.map((item) => {
+          
+            imgtag.setAttribute("src", item.Image)
+            h1.innerHTML = item.Name
+            age.innerHTML = item.Age
+            style.innerHTML = item.Style
+        
+        });
+        currentindex ++
+      }
+
+
+      function previos() {
+        if (currentindex < 0) {
+          return false;
+        }
+
+        d.push(data[currentindex]);
+        d.map((item) => {
+          
+            imgtag.setAttribute("src", item.Image)
+            h1.innerHTML = item.Name
+            age.innerHTML = item.Age
+            style.innerHTML = item.Style
+        
+        });
+        currentindex --
+
+
+      }
+    
+    
+
+      // next();
+      //   next();
+
+      // console.log(map);
+    </script>
+  </body>
+</html>

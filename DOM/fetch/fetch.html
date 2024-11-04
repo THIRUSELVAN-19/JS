@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // console.log(
+      // );
+
+      //  get
+
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((user) => user.json())
+        .then((data) => console.log(data[8]))
+        .catch((error) => console.log(error));
+
+      // post
+
+    //   fetch("https://66d8117237b1cadd80533bcf.mockapi.io/login", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({
+    //       name: "pavi",
+    //     }),
+    //   })
+    //     .then((user) => user.json())
+    //     .then((data) => console.log(data))
+    //     .catch((error) => console.log(error));
+
+      fetch("https://66d8117237b1cadd80533bcf.mockapi.io/login")
+        .then((user) => user.json())
+        .then((data) => console.log(data))
+        .catch((error) => console.log(error));
+    </script>
+  </body>
+</html>

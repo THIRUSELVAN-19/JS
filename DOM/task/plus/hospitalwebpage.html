@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <style>
+      body {
+        
+        background-color: white;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+      
+        
+
+      }
+
+
+      .innercont{
+        background-image: url(/task/img/doctor-with-stethoscope-hands-hospital-background.jpg);
+        height: 650px;
+        width: 1515px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+      }
+
+      #doctor{
+        height: 800px;
+        width: 1520px;
+      }
+
+      #plogo{
+        height: 90px;
+        width: 160px;
+      }
+
+    
+
+      .info{
+        position: relative;
+        line-height: 60px;
+        top: 180px;
+        margin-left: 50px;
+
+
+      }
+
+      .nav-link {
+        color: olive;
+        font-weight: 650;
+        font-family: monospace;
+        
+        
+      }
+
+      .integral{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-left: 85px;
+        
+      
+      }
+
+      .para{
+        padding-top: 0px;
+        line-height: 30px;
+        width: 600px;
+        padding-right: 20px;
+      }
+
+      .picture img{
+        padding-top: -40px;
+        margin-left: 200px;
+        height: 800px;
+        width: 610px;
+    
+      }
+
+      .cards{
+      display:flex;
+      flex-wrap: wrap;
+        gap: 40px;
+        padding: 80px;
+      }
+
+      .card{
+        height: 300px;
+        width: 300px ;
+        padding: 20px;
+        text-align: center;
+        justify-content: center;
+        box-shadow: 0px 0px 3px  1px inset black;
+      }
+
+      #png{
+        height: 150px;
+        width: 250px;
+      }
+
+      #Appointment{
+        width: 250px;
+      }
+
+
+      body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=tel] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.cancelbtntwo {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  height: 60px;
+  width: 90px;
+  border-radius: 50%;
+}
+
+/* #avatar{
+  height: 70px;
+} */
+
+#welcome{
+
+  font-family: monospace;
+
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+span.pswtwo {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+.modaltwo {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+.modal-contenttwo {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+
+  span.pswtwo {
+     display: block;
+     float: none;
+  }
+
+  .cancelbtn {
+     width: 100%;
+  }
+
+  .cancelbtntwo {
+     width: 100%;
+  }
+}
+
+#white{
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  height: 70px;
+  width: 68px;
+  border-radius: 90px;
+  text-align: center;
+
+}
+
+
+#speech{
+  height: 80px;
+  width: auto;
+  border-radius: 90px;
+}
+
+
+      
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="/task/img/T-CARE LOGO.png" alt="logo" style="height: 55px;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 " id="abt">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="#"  onclick="document.getElementById('id02').style.display='block'" style="width:auto;"  >Doctor's Portal</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Health Tips</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <div class="innercont">
+   
+        <div class="info">
+          <img src="/task/img/T-CARE LOGO.png" alt="logo" id="plogo">
+          <h1>Medical Worker <br>
+              INFINITE MEDICAL EXPRESS</h1>
+              <p><b>RENEE FLETCHER CRNP-FNP</b></p>
+              <button class="btn btn-success " id="Appointment" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Book an Appointment</button>
+      </div>
+      
+        <!-- <div class="pic">
+            <img src="/task/img/doctor-with-stethoscope-hands-hospital-background.jpg" alt="doctor" id="doctor">
+        </div> -->
+        
+      </div>
+      
+
+  
+    
+ <br>
+    <div class="integral">
+        <div class="para">
+            <h1 class="text-success"> INFINITE MEDICAL EXPRESS:</h1> <br>
+            <ul>
+                <li>As an integral part of improving patient access to care and chronic disease management and prevention, Infinite Medical Express was Founded in 2017 and is currently based in Edgewood, Maryland. Infinite Medical Express is serviced by Renee Fletcher a Board Certified Family Nurse Practitioner with a vast knowledge base of acute and chronic conditions. The main focus of this clinic is to ensure that each and every patient is given the individual attention that one deserves.</li>
+
+                <br> 
+                <br> 
+
+                <li>Understanding the importance of including the whole person in disease management & prevention is the essential basis of care. This clinic recognized the many correlations exist between access to care and improved health outcomes and recognized that immediate change was needed!  
+                </li>
+
+                <br> 
+                <br>
+
+                <li>As a family ran practice my husband and I plan to add patient quality service as a foundation thus appreciating every single patient that enters our practice. Patients are no longer just a number they are an important part of the Infinite Medical Express Family.</li>
+            </ul>
+        </div>
+        <div class="picture">
+            <img src="/task/img/wmi4fixf.png" alt="wmi4">
+        </div>
+    </div>
+
+    <div class="help bg-success" id="help">
+      <br>
+      <center><h1 class="text-light">How Can I Help You ?</h1></center>
+      <div class="cards bg-success">
+        <div class="card ">
+          <img src="/task/img/jpmc87rs.png" alt="jpmc87rs" id="png">
+          <p>Urgent Care</p>
+          <button class="btn btn-success rounded-5" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" >Book Now</button>
+        </div>
+        <div class="card">
+          <img src="/task/img/3f9dakxi.png" alt="jpmc87rs" id="png">
+          <p>Sports Physicals</p>
+          <button class="btn btn-success rounded-5" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" >Book Now</button>
+        </div>
+        <div class="card">
+          <img src="/task/img/64zlm1wx.png" alt="jpmc87rs" id="png">
+          <p>DOT Certifications</p>
+          <button class="btn btn-success rounded-5" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" >Book Now</button>
+        </div>
+        <div class="card">
+          <img src="/task/img/anbf47ti.png" alt="jpmc87rs" id="png">
+          <p>Flue Shot</p>
+          <button class="btn btn-success rounded-5" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" >Book Now</button>
+        </div>
+        <div class="card">
+          <img src="/task/img/k60lpjsk.png" alt="jpmc87rs" id="png">
+          <p>Occupational Exam</p>
+          <button class="btn btn-success rounded-5" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" >Book Now</button>
+        </div>
+        <div class="card">
+          <img src="/task/img/lr4rq2ul.png" alt="jpmc87rs" id="png">
+          <p>EKG</p>
+          <button class="btn btn-success rounded-5"  onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Book Now</button>
+        </div>
+        <div class="card">
+          <img src="/task/img/ryte65o9.png" alt="jpmc87rs" id="png">
+          <p>Physical Exam</p>
+          <button class="btn btn-success rounded-5" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Book Now</button>
+        </div>
+        <div class="card ">
+          <img src="/task/img/jpmc87rs.png" alt="jpmc87rs" id="png">
+          <p>Urgent Care</p>
+          <button class="btn btn-success rounded-5" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" >Book Now</button>
+        </div>
+      </div>
+    
+    
+      <div class="bg-light text-success ">
+        <br>
+        <center><b><p>@2024 INFINITE MEDICAL EXPRESS</p></b></center>
+      </div>
+
+
+
+      
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="#" id="login-form" method="POST">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="/task/img/T-CARE LOGO.png" alt="Avatar" id="avatar" class="avatar">
+      <h6 class="text-success" id="welcome">Compromising with patient’s safety is never an option.</h6>
+      <h3 class="text-success" id="welcome">welcome...!</h3>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" id="uname" placeholder="Enter Username" name="uname" required>
+
+      <label for="phone"><b>Phone</b></label>
+      <input type="number" id="Phoneno" placeholder="Enter Phone Number" name="Phone" required>
+        
+      <button type="submit" id="sub" onclick="Dis()">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+
+<!-- <div id="id02" class="modal two">
+  
+  <form class="modal-content animate" action="#" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+     
+      <img src="/task/img/T-CARE LOGO.png" alt="Avatar" class="avatar ">
+      <h6 class="text-success" id="welcome">Healing hands, caring heart...</h6>
+      <h3 class="text-success" id="welcome">welcome...!</h3>
+     
+
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" id="unam" placeholder="Enter Username" name="uname" required>
+
+      <label for="phone"><b>Phone</b></label>
+      <input type="tel" id="Phonen" placeholder="Enter Phone Number" name="Phone" required>
+        
+      <button type="submit" id="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtntwo">Cancel</button>
+      <span class="pswtwo">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div> -->
+
+<div class="float-end" id="white">
+  <img src="/task/img/chat-message-front-side-white-background.jpg" alt="speech"  id="speech">
+ </div>
+
+<script>
+
+ document.getElementById('login-form').addEventListener('submit',disp)
+ async function disp (event){
+  event.preventDefault();
+
+  const name = document.getElementById('uname').value;
+  const phone = document.getElementById('Phoneno').value;
+
+  try {
+
+    
+    const response = await fetch(`https://66d8117237b1cadd80533bcf.mockapi.io/care?Username=${name}&Userphone=${phone}`);
+    const users =  await  response.json();
+
+    if (users.length > 0) {
+       window.location = 'userform.html';
+    } else {
+      alert('Login failed. Please check your name and phone number.');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('An error occurred during login.');
+  }
+})
+ </script>
+
+
+
+
+</body>
+</html>

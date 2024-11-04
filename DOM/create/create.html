@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius non rem
+        est, molestias neque quasi, dolore maiores dicta placeat natus molestiae
+        dolores qui distinctio cumque accusantium tempora culpa debitis!
+        Excepturi?
+      </p>
+    </div>
+
+    <script>
+const newele = document.createElement('h1');
+newele.setAttribute('id','Blue')
+const newtext = document.createTextNode('Web development')
+
+newele.append(newtext)
+console.log(newele);
+
+const div = document.querySelector('#demo');
+const p  = document.querySelector('p');
+
+div.insertBefore(newele,p)
+newele.style.color='red';
+
+
+
+// div.replaceChild(newele,p)
+div.removeChild(p)
+
+
+    </script>
+  </body>
+</html>

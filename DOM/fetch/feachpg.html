@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Name</label>
+    <input type="text" id="name">
+    <label for="Phone"></label>
+    <input type="number" id="phone">
+    <button onclick="post()">submit</button>
+    <button onclick="getmeth()">get</button>
+    <div id="demo"></div>
+
+    <script>
+       let nam = document.querySelector("#name");
+       let num = document.querySelector("#phone");
+       let p = document.querySelector("#demo");
+
+       async function post(){
+        const info = {
+          Username : nam.value,
+          Userphone : num.value,
+
+        }
+        let mockapi = await fetch ("https://66d8117237b1cadd80533bcf.mockapi.io/User",{
+            method: "POST",
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(info)
+        })
+       }
+
+       async function getmeth() {
+        let api = await fetch ("https://66d8117237b1cadd80533bcf.mockapi.io/User")
+
+        let final = await api.json();
+        final.map((potter)=> {
+            p.innerHTML += `<p>${potter.Username},${potter.Userphone}</p>`
+        })
+       }
+    </script>
+</body>
+</html>

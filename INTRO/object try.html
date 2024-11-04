@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = {
+            name : "THIRU",
+            age  : "23" ,
+            colour : "blue" ,
+            hight : "172" ,
+            Address :{
+                place : "Avinashi",
+                pincode : "641654",
+                District : "TUP"
+            }
+
+        }
+      console.log(person);
+
+      let person1 = [
+        {
+        name : "THIRU",
+            age  : "23" ,
+            colour : "blue" ,
+            hight : "172" ,
+            Address :{
+                place : "Avinashi",
+                pincode : "641654",
+                District : "TUP"
+            }
+      },{
+        name : "Manoj",
+            age  : "23" ,
+            colour : "green" ,
+            hight : "162" ,
+            Address :{
+                place : "Avinashi",
+                pincode : "641654",
+                District : "TUP"
+            }
+      },{
+        name : "Madhan",
+            age  : "23" ,
+            colour : "red" ,
+            hight : "168" ,
+            Address :{
+                place : "Avinashi",
+                pincode : "641654",
+                District : "TUP"
+            }
+      }]
+      console.log(person1);
+
+      const title = new Object();
+      title['Name'] = 'THIRU';
+      title['age'] = '23';
+      title['color'] = 'Green';
+
+      console.log(title);
+      console.log(title['Name']);
+      title['color'] = 'blue';
+      console.log(title);
+      delete title['age']
+      console.log(title);
+      
+    </script>
+</body>
+</html>

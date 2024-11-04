@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="View()">Hello</button>
+    <h1 id="demo"></h1>
+    <script>
+        function View(){
+            document.getElementById('demo').innerHTML += 'hey pavi'
+        }
+
+        function Add(a,b){
+            document.write(a+b +"<br>")
+        }
+        Add(2,3)
+
+        document.write(Pass(3) +"<br>")
+
+
+        function Pass(a){
+             return a+10
+        }
+
+        function Print(a){
+
+            
+            document.write(a)
+        }
+
+        Print(Pass(2))
+        // Pass(2)
+        
+    
+    </script>
+</body>
+</html>
